@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="EngineerThesisFinal"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_UPLOADFS">
+				<Option working_dir="D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_UPLOADFS"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_BUILD">
+				<Option working_dir="D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_BUILD"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_UPLOAD">
+				<Option working_dir="D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_UPLOAD"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_CLEAN">
+				<Option working_dir="D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_CLEAN"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_REBUILD_PROJECT_INDEX">
+				<Option working_dir="D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_REBUILD_PROJECT_INDEX"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_TEST">
+				<Option working_dir="D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_TEST"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_PROGRAM">
+				<Option working_dir="D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_PROGRAM"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PLATFORMIO_UPDATE_ALL">
+				<Option working_dir="D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 PLATFORMIO_UPDATE_ALL"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="EngineerThesisFinal">
+				<Option output="D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/EngineerThesisFinal.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DF_CPU=16000000L"/>
+					<Add option="-DPLATFORMIO=30201"/>
+					<Add option="-DARDUINO_ARCH_AVR"/>
+					<Add option="-DARDUINO_AVR_NANO"/>
+					<Add option="-DARDUINO=10612"/>
+					<Add option="-D__AVR_ATmega328P__"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/cores/arduino"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/variants/eightanaloginputs"/>
+					<Add directory="D:/Programming/Arduino/EngineerThesisFinal/lib/HMC5883L"/>
+					<Add directory="D:/Programming/Arduino/EngineerThesisFinal/lib/TinyGPS"/>
+					<Add directory="D:/Programming/Arduino/EngineerThesisFinal/lib/QueueList"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/SoftwareSerial/src"/>
+					<Add directory="D:/Programming/Arduino/EngineerThesisFinal/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Bridge/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/EEPROM/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Esplora/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Ethernet/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Firmata"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Firmata/utility"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/GSM/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/HID/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Keyboard/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/LiquidCrystal/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Mouse/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/RobotIRremote/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Robot_Control/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Robot_Motor/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/SD/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/SPI/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/SPI1/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Scheduler/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Servo/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/SpacebrewYun/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Stepper/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/TFT/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Temboo/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/USBHost/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/WiFi/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Wire/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Wire1/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/toolchain-atmelavr/avr/include"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/4.9.2/include"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/4.9.2/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 EngineerThesisFinal"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="EngineerThesisFinal/fast">
+				<Option output="D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/EngineerThesisFinal.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DF_CPU=16000000L"/>
+					<Add option="-DPLATFORMIO=30201"/>
+					<Add option="-DARDUINO_ARCH_AVR"/>
+					<Add option="-DARDUINO_AVR_NANO"/>
+					<Add option="-DARDUINO=10612"/>
+					<Add option="-D__AVR_ATmega328P__"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/cores/arduino"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/variants/eightanaloginputs"/>
+					<Add directory="D:/Programming/Arduino/EngineerThesisFinal/lib/HMC5883L"/>
+					<Add directory="D:/Programming/Arduino/EngineerThesisFinal/lib/TinyGPS"/>
+					<Add directory="D:/Programming/Arduino/EngineerThesisFinal/lib/QueueList"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/SoftwareSerial/src"/>
+					<Add directory="D:/Programming/Arduino/EngineerThesisFinal/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Bridge/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/EEPROM/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Esplora/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Ethernet/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Firmata"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Firmata/utility"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/GSM/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/HID/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Keyboard/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/LiquidCrystal/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Mouse/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/RobotIRremote/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Robot_Control/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Robot_Motor/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/SD/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/SPI/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/SPI1/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Scheduler/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Servo/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/SpacebrewYun/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Stepper/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/TFT/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Temboo/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/USBHost/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/WiFi/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Wire/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Wire1/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/toolchain-atmelavr/avr/include"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/4.9.2/include"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/4.9.2/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/../../../../mingw32/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/5.3.0/include/c++/backward"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 EngineerThesisFinal/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/Programming/Arduino/EngineerThesisFinal/src/EngineerThesisFinal.cpp">
+			<Option target="EngineerThesisFinal"/>
+		</Unit>
+		<Unit filename="D:/Programming/Arduino/EngineerThesisFinal/test/test.cpp">
+			<Option target="EngineerThesisFinal"/>
+		</Unit>
+		<Unit filename="D:/Programming/Arduino/EngineerThesisFinal/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="D:/Programming/Arduino/EngineerThesisFinal/CMakeListsPrivate.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,4 @@
+"C:\Program Files (x86)\JetBrains\CLion 2016.2.2\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\Programming\Arduino\EngineerThesisFinal
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug

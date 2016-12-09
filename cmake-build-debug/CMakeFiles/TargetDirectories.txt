@@ -1,0 +1,11 @@
+D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/CMakeFiles/PLATFORMIO_UPLOADFS.dir
+D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/CMakeFiles/PLATFORMIO_BUILD.dir
+D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/CMakeFiles/PLATFORMIO_UPLOAD.dir
+D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/CMakeFiles/PLATFORMIO_CLEAN.dir
+D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/CMakeFiles/PLATFORMIO_REBUILD_PROJECT_INDEX.dir
+D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/CMakeFiles/PLATFORMIO_TEST.dir
+D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/CMakeFiles/PLATFORMIO_PROGRAM.dir
+D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/CMakeFiles/PLATFORMIO_UPDATE_ALL.dir
+D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/CMakeFiles/EngineerThesisFinal.dir
+D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/CMakeFiles/rebuild_cache.dir
