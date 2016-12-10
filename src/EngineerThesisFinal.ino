@@ -4,6 +4,7 @@
 #include <HMC5883L.h>
 #include <QueueList.h>
 
+#ifndef UNIT_TEST
 #define DEBUG false
 
 SoftwareSerial gpsSerial(2, 3); //tx, rx
@@ -88,13 +89,12 @@ void setup() {
 
 void loop() {
   getGpsData(DEBUG, 1000);
-    getFirstDestinationCoordinatesFromWifi(DEBUG);
-//  if(DEBUG) {
-//    Serial.println(targetLatitude, targetLongitude);
-//  }
+  getFirstDestinationCoordinatesFromWifi(DEBUG);
+  targetLatitude = targetLatitudes.pop();
+  targetLongitude = targetLongitudes.pop();
   while(true) {
     getGpsData(DEBUG, 1000);
-    float distanceToTarget = gps.distance_between(currentLatitude,currentLongitude,targetLongitude,targetLongitude);
+    float distanceToTarget = gps.distance_between(currentLatitude,currentLongitude,targetLatitude,targetLongitude);
     if(DEBUG) {
       Serial.print("DISTANCE IN METERS=");
       Serial.println(distanceToTarget);
@@ -375,24 +375,6 @@ void listenForNewDestinationCoordinatesOrNavigationCancelation(uint32_t sampling
 }
 
 /**
-  * Converts given angle value in degrees to radians
-  * @param angleInDegrees angle value in degrees
-  * @return angle value in radians
-  *//*
-float degreesToRadians(float angleInDegrees) {
-  return angleInDegrees * M_PI / 180;
-}
-
-*//**
-  * Converts given angle value in radians to degrees
-  * @param angleInRadians angle value in radians
-  * @return angle value in degrees
-  *//*
-float radiansToDegrees(float angleInRadians) {
-  return angleInRadians * 180 / M_PI;
-}*/
-
-/**
   * Gets angle which device heads currently
   * @return angle between NS line and user's sight line in degrees
   * @param debug print to Serial window?(true = yes, false = no)
@@ -439,11 +421,11 @@ float getCurrentHeading(bool debug) {
 float getCurrentCourseAngle(float currentLatitude, float currentLongitude, float targetLatitude, float targetLongitude,
                             bool debug) {
   float currentHeading = getCurrentHeading(debug);
-  float currentBearing = gps.course_to(currentLatitude,currentLongitude,targetLongitude,targetLongitude);
+  float currentBearing = gps.course_to(currentLatitude,currentLongitude,targetLatitude,targetLongitude);
   if(debug) {
-      Serial.print("CURRENT BEARING (TO DESTINATION)=");
-      Serial.println(currentBearing);
-    }
+    Serial.print("CURRENT BEARING (TO DESTINATION)=");
+    Serial.println(currentBearing);
+  }
   float currentCourseAngle = currentBearing - currentHeading;
   if (currentCourseAngle < 0) {
     currentCourseAngle += 360;
@@ -531,4 +513,4 @@ void vibrateTheProperDirectionMotorOnce(float destinationAngle) {
   }
 }
 
-
+#endif

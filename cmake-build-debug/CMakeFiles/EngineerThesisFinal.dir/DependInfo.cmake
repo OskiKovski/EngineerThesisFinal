@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "D:/Programming/Arduino/EngineerThesisFinal/src/EngineerThesisFinal.cpp" "D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/CMakeFiles/EngineerThesisFinal.dir/src/EngineerThesisFinal.cpp.obj"
-  "D:/Programming/Arduino/EngineerThesisFinal/test/test.cpp" "D:/Programming/Arduino/EngineerThesisFinal/cmake-build-debug/CMakeFiles/EngineerThesisFinal.dir/test/test.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -23,10 +22,11 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/cores/arduino"
   "C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/variants/eightanaloginputs"
-  "../lib/HMC5883L"
   "../lib/TinyGPS"
   "../lib/QueueList"
   "C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/SoftwareSerial/src"
+  "C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Wire/src"
+  "../lib/HMC5883L"
   "../src"
   "C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Bridge/src"
   "C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/EEPROM/src"
@@ -53,7 +53,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Temboo/src"
   "C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/USBHost/src"
   "C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/WiFi/src"
-  "C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Wire/src"
   "C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Wire1/src"
   "C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/toolchain-atmelavr/avr/include"
   "C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/4.9.2/include"

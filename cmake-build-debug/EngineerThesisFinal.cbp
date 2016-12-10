@@ -112,10 +112,11 @@
 					<Add option="-D__AVR_ATmega328P__"/>
 					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/cores/arduino"/>
 					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/variants/eightanaloginputs"/>
-					<Add directory="D:/Programming/Arduino/EngineerThesisFinal/lib/HMC5883L"/>
 					<Add directory="D:/Programming/Arduino/EngineerThesisFinal/lib/TinyGPS"/>
 					<Add directory="D:/Programming/Arduino/EngineerThesisFinal/lib/QueueList"/>
 					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/SoftwareSerial/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Wire/src"/>
+					<Add directory="D:/Programming/Arduino/EngineerThesisFinal/lib/HMC5883L"/>
 					<Add directory="D:/Programming/Arduino/EngineerThesisFinal/src"/>
 					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Bridge/src"/>
 					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/EEPROM/src"/>
@@ -142,7 +143,6 @@
 					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Temboo/src"/>
 					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/USBHost/src"/>
 					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/WiFi/src"/>
-					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Wire/src"/>
 					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Wire1/src"/>
 					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/toolchain-atmelavr/avr/include"/>
 					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/4.9.2/include"/>
@@ -177,10 +177,11 @@
 					<Add option="-D__AVR_ATmega328P__"/>
 					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/cores/arduino"/>
 					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/variants/eightanaloginputs"/>
-					<Add directory="D:/Programming/Arduino/EngineerThesisFinal/lib/HMC5883L"/>
 					<Add directory="D:/Programming/Arduino/EngineerThesisFinal/lib/TinyGPS"/>
 					<Add directory="D:/Programming/Arduino/EngineerThesisFinal/lib/QueueList"/>
 					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/SoftwareSerial/src"/>
+					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Wire/src"/>
+					<Add directory="D:/Programming/Arduino/EngineerThesisFinal/lib/HMC5883L"/>
 					<Add directory="D:/Programming/Arduino/EngineerThesisFinal/src"/>
 					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Bridge/src"/>
 					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/EEPROM/src"/>
@@ -207,7 +208,6 @@
 					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Temboo/src"/>
 					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/USBHost/src"/>
 					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/WiFi/src"/>
-					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Wire/src"/>
 					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/framework-arduinoavr/libraries/Wire1/src"/>
 					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/toolchain-atmelavr/avr/include"/>
 					<Add directory="C:/Users/oskar.DESKTOP-6DR74SO/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/4.9.2/include"/>
@@ -249,9 +249,6 @@
 			</Target>
 		</Build>
 		<Unit filename="D:/Programming/Arduino/EngineerThesisFinal/src/EngineerThesisFinal.cpp">
-			<Option target="EngineerThesisFinal"/>
-		</Unit>
-		<Unit filename="D:/Programming/Arduino/EngineerThesisFinal/test/test.cpp">
 			<Option target="EngineerThesisFinal"/>
 		</Unit>
 		<Unit filename="D:/Programming/Arduino/EngineerThesisFinal/CMakeLists.txt">

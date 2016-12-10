@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/EngineerThesisFinal.dir/src/EngineerThesisFinal.cpp.obj"
-  "CMakeFiles/EngineerThesisFinal.dir/test/test.cpp.obj"
   "EngineerThesisFinal.pdb"
   "EngineerThesisFinal.exe"
   "EngineerThesisFinal.exe.manifest"
