@@ -1,3 +1,0 @@
-"C:\Program Files (x86)\JetBrains\CLion 2016.2.2\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\EngineerThesisFinal.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\EngineerThesisFinal.dir/objects.a @CMakeFiles\EngineerThesisFinal.dir\objects1.rsp
-C:\Users\oskar.DESKTOP-6DR74SO\.platformio\packages\toolchain-atmelavr\bin\avr-g++.exe  -g   -Wl,--whole-archive CMakeFiles\EngineerThesisFinal.dir/objects.a -Wl,--no-whole-archive  -o EngineerThesisFinal.exe -Wl,--out-implib,libEngineerThesisFinal.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\EngineerThesisFinal.dir\linklibs.rsp
