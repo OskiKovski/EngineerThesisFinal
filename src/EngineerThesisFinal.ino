@@ -38,14 +38,14 @@ String IP = "";
 String port = "3333";
 
 bool hasIPAddress(uint32_t);
-void displayIPOnSerialMonitor();
+String retrieveIPAddress();
 int sendUDPCommandToWifi(String, const int, bool);
 int connectWithWiFi(bool);
 void getCompassReady(bool);
 void getGpsData(bool, uint32_t);
 void showCoordinate();
-void getFirstDestinationCoordinatesFromWifi(bool);
-void listenForNewDestinationCoordinatesOrNavigationCancelation(uint32_t, bool);
+void getAndParseWifiStreamBlocking(bool);
+void getAndParseWifiStreamTimeLimited(uint32_t,bool);
 float getCurrentHeading(bool);
 float getCurrentCourseAngle(float, float, float, float, bool);
 void vibrateOneMotorOnce(int);
@@ -81,18 +81,16 @@ void setup() {
     Serial.println("GPS is Ready");
   }
   delay(1000);
+  getCompassReady(DEBUG);
   if (DEBUG) {
     Serial.println("System Ready..");
   }
-  getCompassReady(DEBUG);
 }
 
 void loop() {
   getGpsData(DEBUG, 1000);
-  getFirstDestinationCoordinatesFromWifi(DEBUG);
-  targetLatitude = targetLatitudes.pop();
-  targetLongitude = targetLongitudes.pop();
-  while(true) {
+  getAndParseWifiStreamBlocking(DEBUG);
+  while(targetLatitude && targetLongitude) {
     getGpsData(DEBUG, 1000);
     float distanceToTarget = gps.distance_between(currentLatitude,currentLongitude,targetLatitude,targetLongitude);
     if(DEBUG) {
@@ -104,13 +102,14 @@ void loop() {
         vibrateMotorsForFinish();
         break;
       }
+      vibrateAllMotorsOnceForGivenTime(1000);
       targetLatitude = targetLatitudes.pop();
       targetLongitude = targetLongitudes.pop();
     }
     currentDestinationAngle = getCurrentCourseAngle(currentLatitude, currentLongitude, targetLatitude,
                                                     targetLongitude, DEBUG);
     vibrateTheProperDirectionMotorOnce(currentDestinationAngle);
-    listenForNewDestinationCoordinatesOrNavigationCancelation(10000, DEBUG);
+    getAndParseWifiStreamTimeLimited(5000,DEBUG);
   }
 }
 
@@ -133,21 +132,20 @@ bool hasIPAddress(uint32_t samplingTime) {
 }
 
 /**
-  * Displays ESP8266 IP address and port on computer's serial monitor
+  * Gets ESP8266 IP address
   */
-void displayIPOnSerialMonitor() {
-  IP = "";
+String retrieveIPAddress() {
+  String IPAddress = "";
   char ch = 0;
   while (1) {
     wifiSerial.println("AT+CIFSR");
     while (wifiSerial.available() > 0) {
       if (wifiSerial.find((char *) "STAIP,")) {
         delay(1000);
-        Serial.print("IP Address:");
         while (wifiSerial.available() > 0) {
           ch = wifiSerial.read();
           if (ch == '+') break;
-          IP += ch;
+          IPAddress += ch;
         }
       }
       if (ch == '+') break;
@@ -155,10 +153,8 @@ void displayIPOnSerialMonitor() {
     if (ch == '+') break;
     delay(1000);
   }
-  Serial.print(IP);
-  Serial.print("Port:");
-  Serial.println(port);
   delay(1000);
+  return IPAddress;
 }
 
 /**
@@ -204,7 +200,7 @@ int sendUDPCommandToWifi(String command, const int timeout, bool debug) {
   * @return 0 when connected, 1 when not
   */
 int connectWithWiFi(bool debug) {
-  wifiSerial.begin(baud);
+  wifiSerial.listen();
   if (sendUDPCommandToWifi("AT", 1000, DEBUG)) {
     if (debug) {
       Serial.println("Wifi probably turned off, aborting");
@@ -229,9 +225,14 @@ int connectWithWiFi(bool debug) {
       return 1;
     }
   }
-  digitalWrite(wifiDiodePinNumber, HIGH);
-  if (debug) {
-    displayIPOnSerialMonitor();
+  IP=retrieveIPAddress();
+  delay(500);
+  if((IP!=("\"0.0.0.0\""))) digitalWrite(wifiDiodePinNumber, HIGH);
+    if (debug) {
+      Serial.print("IP Address:");
+      Serial.print(IP);
+      Serial.print("Port:");
+      Serial.println(port);
   }
   delay(2000);
   sendUDPCommandToWifi("AT+CIPMUX=1", 100, DEBUG);
@@ -269,7 +270,7 @@ void getCompassReady(bool debug) {
   * @return 0 when there is some correct data, 0 when not
   */
 void getGpsData(bool debug, uint32_t samplingTime) {
-  gpsSerial.begin(baud);
+  gpsSerial.listen();
   uint32_t samplingStart = millis();
   while (samplingStart + samplingTime > millis()) {
     while (gpsSerial.available()) {
@@ -296,80 +297,128 @@ void showCoordinate() {
 }
 
 /**
-  * Blocking function that retrieves parsed data from Wifi and aligns its value to params
+  * Gets points list and destination point from the WiFi connection.
+  * Blocking function - works until it doesn't get the point list
   * @param debug print to Serial window?(true = yes, false = no)
   */
-void getFirstDestinationCoordinatesFromWifi(bool debug) {
+void getAndParseWifiStreamBlocking(bool debug) {
   char c;
   String temp;
-  wifiSerial.begin(baud);
-  while (targetLatitudes.isEmpty() && targetLongitudes.isEmpty()) {
-    while(wifiSerial.find((char *) "+IPD,")) {
-      delay(1000);
-      wifiSerial.find((char *) "lat/lng: (");
+  bool wasOpeningParenhesis = false;
+  bool transmissionFinished = false;
+  wifiSerial.listen();
+  while (!transmissionFinished) {
+    while (wifiSerial.available() > 0) {
       c = wifiSerial.read();
-      while (c != ',') {
-        temp += c;
-        c = wifiSerial.read();
+      if (c == '(') {
+        wasOpeningParenhesis = true;
+        temp = "";
+        continue;
+      } else if (c == ',') {
+        if (wasOpeningParenhesis) {
+          targetLatitudes.push(temp.toFloat());
+        }
+        wasOpeningParenhesis = false;
+        temp = "";
+        continue;
+      } else if (c == ')') {
+        targetLongitudes.push(temp.toFloat());
+        temp = "";
+        continue;
+      } else if (c == ':') {
+        temp = "";
+        continue;
       }
-      targetLatitudes.push(temp.toFloat());
-      if (debug) {
-        Serial.println(temp.toFloat());
+      if (temp.equals("CLOSED")) {
+        transmissionFinished = true;
+        break;
       }
-      c = wifiSerial.read();
-      temp = "";
-      while (c != ')') {
-        temp += c;
-        c = wifiSerial.read();
-      }
-      targetLongitudes.push(temp.toFloat());
-      if (debug) {
-        Serial.println(temp.toFloat());
-      }
+      temp += c;
+    }
+  }
+  if (!targetLongitudes.isEmpty() && !targetLongitudes.isEmpty()) {
+    targetLatitude = targetLatitudes.pop();
+    targetLongitude = targetLongitudes.pop();
+    if (debug) {
+      Serial.print("TARGET LATITUDE=");
+      Serial.println(targetLatitude);
+      Serial.print("TARGET LONGITUDE=");
+      Serial.println(targetLongitude);
     }
   }
 }
 
 /**
-  * Listens for data from Wifi, parses it and aligns its value to params
+  * Gets or updates points list and destination point from the WiFi connection.
+  * This function has also cancellation algorithm.
+  * Works until the given time elapse
   * @param samplingTime time in which device listens to coming data
   * @param debug print to Serial window?(true = yes, false = no)
   */
-void listenForNewDestinationCoordinatesOrNavigationCancelation(uint32_t samplingTime, bool debug) {
+void getAndParseWifiStreamTimeLimited(uint32_t samplingTime, bool debug) {
   char c;
-  String temp;
-  wifiSerial.begin(baud);
+  String temp = "";
+  bool wasOpeningParenhesis = false;
+  bool receivingTransmission = false;
+  bool hasNewDestination = false;
+  wifiSerial.listen();
   uint32_t samplingStart = millis();
   while (samplingStart + samplingTime > millis()) {
-    while (wifiSerial.find((char *) "+IPD,")) {
-      delay(1000);
-      while (wifiSerial.find((char *) "lat/lng: (")) {
+    while (wifiSerial.available() > 0) {
+      if(!receivingTransmission) {
+        while (!targetLongitudes.isEmpty() && !targetLatitudes.isEmpty()) {
+          targetLatitudes.pop();
+          targetLongitudes.pop();
+        }
+        targetLatitude = NULL;
+        targetLongitude = NULL;
+        receivingTransmission = true;
+      } else {
         c = wifiSerial.read();
-        while (c != ',') {
-          temp += c;
-          c = wifiSerial.read();
+        if (c == '(') {
+          wasOpeningParenhesis = true;
+          temp = "";
+          continue;
+        } else if (c == ',') {
+          if (wasOpeningParenhesis) {
+            hasNewDestination = true;
+            targetLatitudes.push(temp.toFloat());
+          }
+          wasOpeningParenhesis = false;
+          temp = "";
+          continue;
+        } else if (c == ')') {
+          hasNewDestination = true;
+          targetLongitudes.push(temp.toFloat());
+          temp = "";
+          continue;
+        } else if (c == ':') {
+          temp = "";
+          continue;
         }
-        targetLatitudes.push(temp.toFloat());
-        if (debug) {
-          Serial.println(temp);
+        if (temp.equals("CLOSED")) {
+          receivingTransmission=false;
+          break;
         }
-        c = wifiSerial.read();
-        temp = "";
-        while (c != ')') {
-          temp += c;
-          c = wifiSerial.read();
+        if (temp.equals("CANCEL")) {
+          if (debug) {
+            Serial.println("GOT CANCELLATION MESSAGE");
+          }
+          hasNewDestination=false;
+          break;
         }
-        targetLongitudes.push(temp.toFloat());
-        if (debug) {
-          Serial.println(temp);
-        }
+        temp += c;
       }
     }
-    if(wifiSerial.find((char *) "CANCEL")) {
-      while(!targetLongitudes.isEmpty() && !targetLatitudes.isEmpty()) {
-        targetLatitudes.pop();
-        targetLongitudes.pop();
-      }
+  }
+  if(hasNewDestination) {
+    targetLatitude = targetLatitudes.pop();
+    targetLongitude = targetLongitudes.pop();
+    if (debug) {
+      Serial.print("TARGET LATITUDE=");
+      Serial.println(targetLatitude);
+      Serial.print("TARGET LONGITUDE=");
+      Serial.println(targetLongitude);
     }
   }
 }
